@@ -1,13 +1,19 @@
 # Task 3 后端与 AI 服务
 
-本目录提供蓝心 AI 学习伴侣的 Mock 后端服务。它优先保证 Demo 闭环可运行，之后再替换真实 vivo AIGC / 蓝心大模型能力。
+本目录提供蓝心 AI 学习伴侣的 Java Mock 后端服务。它优先保证 Demo 闭环可运行，之后再替换真实 vivo AIGC / 蓝心大模型能力。
 
 ## 启动
 
 ```bash
 cd backend
-python3 -m pip install -r requirements.txt
-python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+mvn spring-boot:run
+```
+
+如果终端提示找不到 Java Runtime，先设置 Java 17：
+
+```bash
+export JAVA_HOME=/Users/yzh666/.sdkman/candidates/java/17.0.12-tem
+export PATH="$JAVA_HOME/bin:$PATH"
 ```
 
 健康检查：
